@@ -1,0 +1,16 @@
+@use "../abstracts/colors" as colors;
+@use "../abstracts/fonts" as fonts;
+button{
+    background-color: colors.$color-secondary;
+    font-weight: fonts.$font-weight-bold;
+    font-size: 0.875rem;
+    padding: 1rem;
+    color: colors.$color-black;
+    border: none;
+    border-radius: 4px;
+}
+
+.remove{
+    background-color: transparent;
+    text-decoration: underline;
+}
