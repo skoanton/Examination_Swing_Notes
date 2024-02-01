@@ -2,13 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/app/main.ts">
+    <link rel="stylesheet" href="src/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swing App</title>
   </head>
   <body>
   
-    
+    <header>
+      <!-- Sök efter användare -->
+    </header> 
+
+    <article class="notes">
+      <ul class="notes-list">
+        <li>
+          <article class="note">
+            <section class="note-info">
+              <p class="publish-date">måndag 3 Nov</p>
+              <p class="notes">Kul anteckning</p>
+              <button class="button">Uppdatera</button>
+            </section>
+            
+            <section class="note-footer">
+              <section class="user-info">
+                <img src="./src/assets/dash.svg" alt="Dash">
+                <p class="user">Snodden</p>
+              </section>
+
+              <section> 
+                <button class="button remove">Ta Bort</button>
+              </section>
+            </section>
+           
+          </article>
+          
+
+        </li>
+      </ul>
+      
+    </article>
+
+
+    <article class="new-note">
+      <input type="textarea" placeholder="Skriv anteckning här">
+
+      <section class="username-input">
+        <p>Användarnamn</p>
+        <input type="text">
+      </section>
+      <button class="button">Publicera</button>
+    </article>
+
 
 
     <script type="module" src="/src/app/main.ts"></script>
