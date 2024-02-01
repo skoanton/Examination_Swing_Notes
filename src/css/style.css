@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  font-family: "PT Sans", sans-serif;
+}
+
 body {
   background-color: #19274A;
-  font-family: "PT Sans", sans-serif;
+  color: #000000;
   font-weight: 400;
   padding: 1rem;
+  height: 100vh;
 }
 
 ul {
@@ -33,10 +38,17 @@ button {
   text-decoration: underline;
 }
 
+.publish {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
 .note {
   background-color: #ffffff;
-  display: flex;
+  display: none;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   color: #000000;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -45,6 +57,8 @@ button {
 .note .note-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 1rem;
 }
 .note .note-info .text {
@@ -67,7 +81,9 @@ button {
 }
 .note .note-footer {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
 }
 .note .note-footer .user-info {
   display: flex;
@@ -76,6 +92,51 @@ button {
   font-weight: 700;
   font-style: italic;
   font-size: 1rem;
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 100%;
+  gap: 3rem;
+}
+.new-note textarea {
+  font-size: 1.5rem;
+  padding: 1rem;
+  flex-grow: 1;
+  max-height: 35rem;
+}
+.new-note textarea:focus {
+  outline: none;
+}
+.new-note textarea:focus::placeholder {
+  color: transparent;
+}
+.new-note .username-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.new-note .username-input p {
+  color: #ffffff;
+  letter-spacing: 0.35rem;
+  font-size: 0.875rem;
+}
+.new-note .username-input input {
+  height: 5rem;
+  font-size: 1.25rem;
+  padding: 0 1rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+.new-note .username-input input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

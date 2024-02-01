@@ -1,18 +1,16 @@
 @use "../abstracts/colors" as colors;
 @use "../abstracts/fonts" as fonts;
-
+@use "../mixin/mixin" as mixin;
 
 .note{
     background-color: colors.$color-white;
-    display: flex;
-    flex-direction: column;
+    @include mixin.flexbox-settings(none,column);
     color: colors.$color-black;
     gap: 0.5rem;
     padding: 0.5rem;
     height: max-content;
     .note-info{
-        display: flex;
-        flex-direction: column;
+        @include mixin.flexbox-settings(flex,column);
         gap: 1rem;
 
         .text{
@@ -39,8 +37,7 @@
     }
 
     .note-footer{
-        display: flex;
-        justify-content: space-between;
+        @include mixin.flexbox-settings(flex,row,space-between);
 
         .user-info{
             display: flex;

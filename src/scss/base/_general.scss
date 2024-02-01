@@ -1,11 +1,19 @@
 @use "../abstracts/colors" as color;
 @use "../abstracts/fonts" as fonts;
 
-body{
-    background-color: color.$color-primary;
+
+*{
     font-family: fonts.$font-family;
+}
+
+
+body{
+
+    background-color: color.$color-primary;
+    color: color.$color-black;
     font-weight: fonts.$font-weight-small;
     padding: 1rem;
+    height: 100vh;
 }
 
 ul{
