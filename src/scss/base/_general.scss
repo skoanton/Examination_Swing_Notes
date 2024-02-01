@@ -1,0 +1,8 @@
+@use "../abstracts/colors" as color;
+@use "../abstracts/fonts" as fonts;
+
+body{
+    background-color: color.$color-primary;
+    font-family: fonts.$font-family;
+    font-weight: fonts.$font-weight-small;
+}
