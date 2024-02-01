@@ -3,6 +3,11 @@ body {
   background-color: #19274A;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
 }
 
 *,
@@ -17,7 +22,7 @@ button {
   background-color: #EF4343;
   font-weight: 700;
   font-size: 0.875rem;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   color: #000000;
   border: none;
   border-radius: 4px;
@@ -26,6 +31,51 @@ button {
 .remove {
   background-color: transparent;
   text-decoration: underline;
+}
+
+.note {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  height: max-content;
+}
+.note .note-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.note .note-info .text {
+  height: 3rem;
+  width: 100%;
+}
+.note .note-info .text p {
+  word-break: break-all;
+}
+.note .note-info .publish-date {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+}
+.note .note-info .text-note {
+  font-size: 1rem;
+}
+.note .note-info .update {
+  width: 30%;
+  margin-left: auto;
+}
+.note .note-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.note .note-footer .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

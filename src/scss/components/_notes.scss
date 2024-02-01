@@ -1,0 +1,58 @@
+@use "../abstracts/colors" as colors;
+@use "../abstracts/fonts" as fonts;
+
+
+.note{
+    background-color: colors.$color-white;
+    display: flex;
+    flex-direction: column;
+    color: colors.$color-black;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: max-content;
+    .note-info{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .text{
+            height: 3rem;
+            width: 100%;
+            p{
+                word-break: break-all;
+            }
+        }
+        .publish-date{
+            color: colors.$color-black-light;
+            font-size: 0.75rem;
+        }
+
+        .text-note{
+            font-size: 1rem;
+        }
+
+        .update{
+            width: 30%;
+            margin-left: auto;
+        }
+
+    }
+
+    .note-footer{
+        display: flex;
+        justify-content: space-between;
+
+        .user-info{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: fonts.$font-weight-bold;
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+
+
+     
+
+}

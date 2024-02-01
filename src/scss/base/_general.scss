@@ -5,4 +5,9 @@ body{
     background-color: color.$color-primary;
     font-family: fonts.$font-family;
     font-weight: fonts.$font-weight-small;
+    padding: 1rem;
+}
+
+ul{
+    list-style-type: none;
 }
