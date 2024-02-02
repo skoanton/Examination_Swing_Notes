@@ -24,12 +24,14 @@ export function AddNewNote(titleText:string,noteText: string, username: string) 
         const textAreaTitleNoteEL = document.createElement("textarea") as HTMLTextAreaElement;
         textAreaTitleNoteEL.classList.add("title-note");
         textAreaTitleNoteEL.textContent = titleText;
+        textAreaTitleNoteEL.readOnly;
         sectionNoteInfoEl.appendChild(textAreaTitleNoteEL);
 
 
         const TextAreaTextNoteEl = document.createElement("textarea") as HTMLTextAreaElement;
         TextAreaTextNoteEl.classList.add("text-note");
         TextAreaTextNoteEl.textContent = noteText; // ändra med api sen;
+        textAreaTitleNoteEL.readOnly;
         sectionNoteInfoEl.appendChild(TextAreaTextNoteEl);
 
         const buttonUpdateEl: HTMLButtonElement | null = document.createElement("button");

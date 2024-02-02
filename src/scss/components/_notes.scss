@@ -7,7 +7,9 @@
     .add-new-note {
         position: fixed;
         bottom: 15px;
-        right: 15px;
+        left: 20px;
+
+        
     }
 
     ul {
@@ -41,7 +43,7 @@
             }
 
             .text-note {
-                height: 4rem;
+                height: 6.25rem;
             }
 
             .title-note{

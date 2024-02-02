@@ -53,7 +53,7 @@ button {
 .notes .add-new-note {
   position: fixed;
   bottom: 15px;
-  right: 15px;
+  left: 20px;
 }
 .notes ul {
   list-style-type: none;
@@ -87,7 +87,7 @@ button {
   outline: none;
 }
 .notes .note .note-info .text-note {
-  height: 4rem;
+  height: 6.25rem;
 }
 .notes .note .note-info .title-note {
   font-size: 1.25rem;
@@ -129,7 +129,7 @@ button {
   gap: 2rem;
 }
 .new-note .title, .new-note .note-textarea {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem;
 }
 .new-note .title:focus, .new-note .note-textarea:focus {
@@ -139,7 +139,7 @@ button {
   color: transparent;
 }
 .new-note .title {
-  height: 4.5rem;
+  height: 5rem;
 }
 .new-note .note-textarea {
   flex-grow: 1;
@@ -155,7 +155,7 @@ button {
 .new-note .username-input p {
   color: #ffffff;
   letter-spacing: 0.35rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .new-note .username-input input {
   height: 5rem;

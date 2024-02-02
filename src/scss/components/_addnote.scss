@@ -8,7 +8,7 @@
     gap: 2rem;
 
     .title, .note-textarea{
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 1rem;
         &:focus{
             outline: none;      
@@ -19,10 +19,11 @@
     }
 
     .title{
-        height: 4.5rem;
+        height: 5rem;
+        
     }
     .note-textarea{
-        flex-grow: 1;  
+        flex-grow: 1;
         max-height: 30rem;
     
           
@@ -35,7 +36,7 @@
         p{
             color: colors.$color-white;
             letter-spacing: 0.35rem;
-            font-size: 0.875rem;
+            font-size: 1rem;
         }
 
         input{
