@@ -16,10 +16,11 @@ export function addEventListner(){
     btnAddNewNote?.addEventListener("click",switchView);
 
     btnPublishNote?.addEventListener("click", () =>{     
-        const noteText = (document.getElementById("noteToAdd") as HTMLTextAreaElement).value;
+        const titleText:string = (document.getElementById("titleToAdd") as HTMLTextAreaElement).value;
+        const noteText:string = (document.getElementById("noteToAdd") as HTMLTextAreaElement).value;
         const usernameInput:string = (document.getElementById("usernameInput") as HTMLInputElement).value;       
         console.log(noteText,usernameInput);
-        AddNewNote(noteText,usernameInput);
+        AddNewNote(titleText,noteText,usernameInput);
     })
 
     btnUpdateNote?.addEventListener("click", () => {

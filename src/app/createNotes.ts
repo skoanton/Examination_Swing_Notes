@@ -1,9 +1,9 @@
 
-export function AddNewNote(noteText: string, username: string) {
+export function AddNewNote(titleText:string,noteText: string, username: string) {
     console.log("La till en note");
     
     
-    if (noteText != "" && username != "") {
+    if (titleText != "" && noteText != "" && username != "" ) {
         const ulEl: HTMLUListElement | null = document.querySelector(".notes-list");
 
         const listEl: HTMLElement | null = document.createElement("li");
@@ -20,6 +20,12 @@ export function AddNewNote(noteText: string, username: string) {
         pDateEl.classList.add("publish-date");
         pDateEl.textContent = " Måndag 2 December"; // Ska tas från api sen
         sectionNoteInfoEl.appendChild(pDateEl);
+
+        const textAreaTitleNoteEL = document.createElement("textarea") as HTMLTextAreaElement;
+        textAreaTitleNoteEL.classList.add("title-note");
+        textAreaTitleNoteEL.textContent = titleText;
+        sectionNoteInfoEl.appendChild(textAreaTitleNoteEL);
+
 
         const TextAreaTextNoteEl = document.createElement("textarea") as HTMLTextAreaElement;
         TextAreaTextNoteEl.classList.add("text-note");

@@ -79,13 +79,20 @@ button {
   align-items: stretch;
   gap: 1rem;
 }
-.notes .note .note-info textarea {
+.notes .note .note-info .text-note, .notes .note .note-info .title-note {
   border: none;
-  height: 4rem;
   width: 100%;
 }
-.notes .note .note-info textarea:focus {
+.notes .note .note-info .text-note:focus, .notes .note .note-info .title-note:focus {
   outline: none;
+}
+.notes .note .note-info .text-note {
+  height: 4rem;
+}
+.notes .note .note-info .title-note {
+  font-size: 1.25rem;
+  font-weight: 700;
+  height: 2rem;
 }
 .notes .note .note-info .publish-date {
   color: rgba(0, 0, 0, 0.6);
@@ -121,17 +128,22 @@ button {
   height: 90%;
   gap: 2rem;
 }
-.new-note textarea {
+.new-note .title, .new-note .note-textarea {
   font-size: 1.5rem;
   padding: 1rem;
-  flex-grow: 1;
-  max-height: 30rem;
 }
-.new-note textarea:focus {
+.new-note .title:focus, .new-note .note-textarea:focus {
   outline: none;
 }
-.new-note textarea:focus::placeholder {
+.new-note .title:focus::placeholder, .new-note .note-textarea:focus::placeholder {
   color: transparent;
+}
+.new-note .title {
+  height: 4.5rem;
+}
+.new-note .note-textarea {
+  flex-grow: 1;
+  max-height: 30rem;
 }
 .new-note .username-input {
   display: flex;
