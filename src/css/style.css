@@ -14,6 +14,13 @@ body {
 ul {
   list-style-type: none;
 }
+ul li {
+  margin-bottom: 1rem;
+}
+
+.hide {
+  display: none !important;
+}
 
 *,
 *::after,
@@ -43,9 +50,20 @@ button {
   padding: 1rem;
 }
 
-.note {
+.notes .add-new-note {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.notes ul {
+  list-style-type: none;
+}
+.notes ul li {
+  margin-bottom: 1rem;
+}
+.notes .note {
   background-color: #ffffff;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -54,38 +72,39 @@ button {
   padding: 0.5rem;
   height: max-content;
 }
-.note .note-info {
+.notes .note .note-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   gap: 1rem;
 }
-.note .note-info .text {
-  height: 3rem;
+.notes .note .note-info textarea {
+  border: none;
+  height: 4rem;
   width: 100%;
 }
-.note .note-info .text p {
-  word-break: break-all;
+.notes .note .note-info textarea:focus {
+  outline: none;
 }
-.note .note-info .publish-date {
+.notes .note .note-info .publish-date {
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.75rem;
 }
-.note .note-info .text-note {
+.notes .note .note-info .text-note {
   font-size: 1rem;
 }
-.note .note-info .update {
+.notes .note .note-info .update {
   width: 30%;
   margin-left: auto;
 }
-.note .note-footer {
+.notes .note .note-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
 }
-.note .note-footer .user-info {
+.notes .note .note-footer .user-info {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -97,16 +116,16 @@ button {
 .new-note {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: stretch;
-  height: 100%;
-  gap: 3rem;
+  height: 90%;
+  gap: 2rem;
 }
 .new-note textarea {
   font-size: 1.5rem;
   padding: 1rem;
   flex-grow: 1;
-  max-height: 35rem;
+  max-height: 30rem;
 }
 .new-note textarea:focus {
   outline: none;
@@ -137,6 +156,14 @@ button {
 }
 .new-note .username-input input:focus {
   outline: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

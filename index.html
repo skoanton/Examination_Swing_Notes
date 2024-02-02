@@ -8,21 +8,19 @@
   </head>
   <body>
   
-    <header>
-      <!-- Sök efter användare -->
-    </header> 
+    <header class="start-page">
+      <button class="read-notes" id="btnReadNotes">Läs anteckningar</button>
+    </header>
 
-    <article class="notes">
+    <article class="notes hide" >
+      
       <ul class="notes-list">
         <li>
           <article class="note">
             <section class="note-info">
               <p class="publish-date">måndag 3 Nov</p>
-              <div class="text">
-                <p class="text-note">Kul antecsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssskning</p>
-              </div>  
-              
-              <button class="update">Uppdatera</button>
+              <textarea readonly class="text-note">Kul antecsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssskning</textarea>         
+              <button class="update" id ="btnUpdateNote">Uppdatera</button>
             </section>
             
             <section class="note-footer">
@@ -31,28 +29,49 @@
                 <p class="user">Snodden</p>
               </section>
 
-              <section> 
-                <button class="remove">Ta Bort</button>
+              <section>
+                <button class="remove" id="btnRemoveNote">Ta Bort</button>
               </section>
             </section>
            
           </article>
           
+        </li>
+        <li>
+          <article class="note">
+            <section class="note-info">
+              <p class="publish-date">måndag 3 Nov</p>
+              <textarea readonly class="text-note">Kul antecsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssskning</textarea>        
+              <button class="update" id ="btnUpdateNote">Uppdatera</button>
+            </section>
+            
+            <section class="note-footer">
+              <section class="user-info">
+                <img src="./src/assets/dash.svg" alt="Dash">
+                <p class="user">Snodden</p>
+              </section>
 
+              <section>
+                <button class="remove" id="btnRemoveNote">Ta Bort</button>
+              </section>
+            </section>
+           
+          </article>
+          
         </li>
       </ul>
-      
+      <img class="add-new-note" id="btnAddNewNote" src="./src/assets/pencil.svg" alt="Pencil Button">
     </article>
 
 
     <article class="new-note">
-      <textarea id="" cols="30" rows="10" placeholder="hej"></textarea>
+      <textarea id="noteToAdd" cols="30" rows="10" placeholder="Börja skriva.."></textarea>
 
       <section class="username-input">
         <p>Användarnamn</p>
-        <input type="text">
+        <input id="usernameInput" type="text">
       </section>
-      <button class="publish">Publicera</button>
+      <button class="publish" id="btnPublishNote">Publicera</button>
     </article>
 
 

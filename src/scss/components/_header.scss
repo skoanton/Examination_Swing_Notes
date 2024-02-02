@@ -1,0 +1,7 @@
+@use "../mixin/mixin" as mixin;
+
+
+header{
+    @include mixin.flexbox-settings(flex,row,center,center);
+    margin-bottom: 1rem;
+}

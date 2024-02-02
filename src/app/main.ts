@@ -1,1 +1,7 @@
-console.log("Hello world");
+import {addEventListner} from "./eventListner";
+
+console.log("Hello");
+addEventListner();
+
+
+

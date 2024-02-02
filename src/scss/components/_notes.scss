@@ -2,54 +2,76 @@
 @use "../abstracts/fonts" as fonts;
 @use "../mixin/mixin" as mixin;
 
-.note{
-    background-color: colors.$color-white;
-    @include mixin.flexbox-settings(none,column);
-    color: colors.$color-black;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    height: max-content;
-    .note-info{
-        @include mixin.flexbox-settings(flex,column);
-        gap: 1rem;
 
-        .text{
-            height: 3rem;
-            width: 100%;
-            p{
-                word-break: break-all;
+.notes {
+    .add-new-note {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    ul{
+        list-style-type: none;
+    
+        li{
+            margin-bottom: 1rem;
+        }
+    }
+
+
+    .note {
+        background-color: colors.$color-white;
+        @include mixin.flexbox-settings(flex, column);
+        color: colors.$color-black;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        height: max-content;
+
+        .note-info {
+            @include mixin.flexbox-settings(flex, column);
+            gap: 1rem;
+
+                textarea{
+                    border: none;
+                    height: 4rem;
+                    width: 100%;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+           
+
+            .publish-date {
+                color: colors.$color-black-light;
+                font-size: 0.75rem;
+            }
+
+            .text-note {
+                font-size: 1rem;
+            }
+
+            .update {
+                width: 30%;
+                margin-left: auto;
+            }
+
+        }
+
+        .note-footer {
+            @include mixin.flexbox-settings(flex, row, space-between);
+
+            .user-info {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-weight: fonts.$font-weight-bold;
+                font-style: italic;
+                font-size: 1rem;
             }
         }
-        .publish-date{
-            color: colors.$color-black-light;
-            font-size: 0.75rem;
-        }
 
-        .text-note{
-            font-size: 1rem;
-        }
 
-        .update{
-            width: 30%;
-            margin-left: auto;
-        }
+
 
     }
-
-    .note-footer{
-        @include mixin.flexbox-settings(flex,row,space-between);
-
-        .user-info{
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: fonts.$font-weight-bold;
-            font-style: italic;
-            font-size: 1rem;
-        }
-    }
-
-
-     
-
 }
