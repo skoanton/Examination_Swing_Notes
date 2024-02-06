@@ -34,12 +34,10 @@ export async function removeNote(id:string) {
    if( await deleteRequest(id)){
     const articleToChange: HTMLElement | null = document.getElementById(id);
     while (articleToChange?.firstChild){
-        console.log("Delete: " + articleToChange.firstChild);
         articleToChange.removeChild(articleToChange.firstChild);
     }
     articleToChange?.parentElement?.remove();
     articleToChange?.remove();
    };
    
-
 }

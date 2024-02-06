@@ -1,0 +1,7 @@
+@use "../mixin/mixin" as mixin;
+
+.login-page{
+    @include mixin.flexbox-settings(flex,column,center,center);
+    gap: 1rem;
+    
+}

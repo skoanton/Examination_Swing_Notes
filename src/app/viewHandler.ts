@@ -1,27 +1,17 @@
-const notesViewEl : HTMLElement | null = document.querySelector(".notes");
-const startPageViewEl : HTMLElement | null = document.querySelector(".start-page")
-const newNoteViewEl : HTMLElement | null = document.querySelector(".new-note");
+const notesViewEl = document.querySelector(".notes") as HTMLElement;
+const newNoteViewEl = document.querySelector(".new-note")as HTMLElement;
+const loginViewEl = document.querySelector(".login-page") as HTMLElement;
 
+export const views ={
+    notesViewEl: notesViewEl,
+    newNoteViewEl: newNoteViewEl,
+    loginViewEl: loginViewEl
+    
+}
 
-const views =[
-    notesViewEl,
-    startPageViewEl,
-    newNoteViewEl
-]
-
-
-export function switchView(){
+export function switchView(currentView:HTMLElement,newView:HTMLElement) {
     console.log("Switching view");
+    currentView.classList.add("hide");
+    newView.classList.remove("hide");
 
-        views.forEach(view => {
-            console.log(view);
-            if(view?.classList.contains("hide")){
-                view.classList.remove("hide");
-            }
-            else{
-                view?.classList.add("hide");
-            }
-        });
-    
-    
 }

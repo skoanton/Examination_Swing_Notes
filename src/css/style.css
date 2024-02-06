@@ -171,4 +171,12 @@ header {
   margin-bottom: 1rem;
 }
 
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

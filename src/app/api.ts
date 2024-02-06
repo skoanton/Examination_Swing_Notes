@@ -34,10 +34,10 @@ export async function postRequest(username: string, title: string, note: string)
 
 }
 
-export async function GetRequest() {
+export async function getRequest(username:string) {
 
     try {
-        const response = await axios.get(`${BASE_URL}/api/notes/skoanton`);
+        const response = await axios.get(`${BASE_URL}/api/notes/${username}`);
 
         const notes: getData[] = response.data.notes;
         console.log(notes);

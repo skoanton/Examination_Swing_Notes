@@ -1,11 +1,20 @@
 import { postRequest } from "./api";
 import { removeNote, editNote, updateNote } from "./editNotes";
 
+export let currentUsername:string;
 
-export async function createNote(titleText: string, noteText: string, username: string) {
+export function setUsername(username:string){
+    currentUsername = username;
+}
 
-    if (titleText != "" && noteText != "" && username != "") {
-        postRequest(username, titleText, noteText);
+
+export async function createNote() {
+    const titleText:string = (document.getElementById("titleToAdd") as HTMLTextAreaElement).value;
+    const noteText:string = (document.getElementById("noteToAdd") as HTMLTextAreaElement).value;
+    const usernameInput:string = (document.getElementById("usernameInput") as HTMLInputElement).value; 
+
+    if (titleText != "" && noteText != "" && usernameInput != "") {
+        postRequest(usernameInput, titleText, noteText);
     }
 
     else {
@@ -16,7 +25,7 @@ export async function createNote(titleText: string, noteText: string, username: 
 
 export function addNewNote(titleText: string, noteText: string, username: string, date: string, id: string) {
     console.log("La till en note");
-
+    currentUsername = username;
     const ulEl: HTMLUListElement | null = document.querySelector(".notes-list");
 
     const listEl: HTMLElement | null = document.createElement("li");

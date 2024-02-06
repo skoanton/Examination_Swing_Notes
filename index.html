@@ -8,14 +8,10 @@
   </head>
   <body>
   
-    <header class="start-page">
-      <button class="read-notes" id="btnReadNotes">Läs anteckningar</button>
-    </header>
-
     <article class="notes hide" >
       
       <ul class="notes-list">
-        <li>
+       <!--  <li>
           <article class="note">
             <section class="note-info">
               <p class="publish-date">måndag 3 Nov</p>
@@ -59,13 +55,13 @@
            
           </article>
           
-        </li>
+        </li> -->
       </ul>
       <img class="add-new-note" id="btnAddNewNote" src="./src/assets/pencil.svg" alt="Pencil Button">
     </article>
 
-
-    <article class="new-note">
+    <article class="new-note hide">
+      <button class="read-notes" id="btnReadNotes">Läs anteckningar</button>
       <textarea class="title" id="titleToAdd" cols="30" placeholder="Title" maxlength="50"></textarea>
       <textarea class="note-textarea" id="noteToAdd" cols="30" rows="10" placeholder="Börja skriva.." maxlength="200"></textarea>
 
@@ -74,9 +70,15 @@
         <input id="usernameInput" type="text">
       </section>
       <button class="publish" id="btnPublishNote">Publicera</button>
+      
     </article>
 
-
+    <article class="login-page">
+      <h1>Välkommen till Swing notes</h1>
+      <p>Vänligen skriv in ett användarnamn för att börja kunna ta antecknignar</p>
+      <input type="text" id="usernameLogin">
+      <button id="btnLogin">Login</button>
+    </article>
 
     <script type="module" src="/src/app/main.ts"></script>
   </body>
