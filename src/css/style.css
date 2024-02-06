@@ -11,13 +11,6 @@ body {
   height: 100vh;
 }
 
-ul {
-  list-style-type: none;
-}
-ul li {
-  margin-bottom: 1rem;
-}
-
 .hide {
   display: none !important;
 }
@@ -101,7 +94,7 @@ button {
 .notes .note .note-info .text-note {
   font-size: 1rem;
 }
-.notes .note .note-info .update {
+.notes .note .note-info .update, .notes .note .note-info .edit {
   width: 30%;
   margin-left: auto;
 }
