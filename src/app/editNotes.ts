@@ -41,3 +41,13 @@ export async function removeNote(id:string) {
    };
    
 }
+
+export function resetList(){
+
+    const ulEl = document.querySelector(".notes-list") as HTMLOListElement;
+
+    while(ulEl.firstChild){
+        ulEl.removeChild(ulEl.firstChild);
+    }
+
+}

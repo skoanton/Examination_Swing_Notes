@@ -40,8 +40,9 @@ export async function getRequest(username:string) {
         const response = await axios.get(`${BASE_URL}/api/notes/${username}`);
 
         const notes: getData[] = response.data.notes;
-        console.log(notes);
+        
         notes.forEach(newNote => {
+            console.log("lägger till:" + newNote.title);
             addNewNote(newNote.title, newNote.note, newNote.username, newNote.createdAt, newNote.id);
         });
         return response;
@@ -51,7 +52,6 @@ export async function getRequest(username:string) {
         console.error("Något gick fel med GET Request");
         throw AxiosError;
     }
-
 
 }
 
