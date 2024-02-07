@@ -22,9 +22,6 @@ export async function postRequest(username: string, title: string, note: string)
         }
 
         const response: Response = await axios.post(`${BASE_URL}/api/notes`, newNote);
-
-        console.log("Response from server", response);
-
         return response;
     }
     catch (error) {
@@ -38,11 +35,9 @@ export async function getRequest(username:string) {
 
     try {
         const response = await axios.get(`${BASE_URL}/api/notes/${username}`);
-
         const notes: getData[] = response.data.notes;
         
         notes.forEach(newNote => {
-            console.log("lägger till:" + newNote.title);
             addNewNote(newNote.title, newNote.note, newNote.username, newNote.createdAt, newNote.id);
         });
         return response;
@@ -74,13 +69,11 @@ export async function putRequest(note: string, id: string) {
     }
 
 } 
-
-
 export async function deleteRequest(id:string){
     try{
         
         const response: Response = await axios.delete(`${BASE_URL}/api/notes/${id}`);
-        console.log(response);
+        
         return response;
     }
 

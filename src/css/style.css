@@ -132,35 +132,22 @@ button {
   color: transparent;
 }
 .new-note .title {
-  height: 5rem;
+  height: 4rem;
 }
 .new-note .note-textarea {
   flex-grow: 1;
   max-height: 30rem;
 }
-.new-note .username-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 0.5rem;
+.new-note .change-user {
+  align-self: center;
 }
-.new-note .username-input p {
+.new-note p {
+  text-align: center;
   color: #ffffff;
-  letter-spacing: 0.35rem;
   font-size: 1rem;
 }
-.new-note .username-input input {
-  height: 5rem;
-  font-size: 1.25rem;
-  padding: 0 1rem;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 3px;
-}
-.new-note .username-input input:focus {
-  outline: none;
+.new-note p span {
+  text-decoration: underline;
 }
 
 header {
@@ -177,6 +164,28 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  height: 100%;
+}
+.login-page h1 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+.login-page h1 span {
+  color: #EF4343;
+  text-decoration: underline;
+}
+.login-page p {
+  color: #ffffff;
+  text-align: center;
+}
+.login-page input {
+  font-size: 1rem;
+  height: 2rem;
+  width: 15rem;
+  padding: 1rem;
+}
+.login-page input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

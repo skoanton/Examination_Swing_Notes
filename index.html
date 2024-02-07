@@ -11,68 +11,25 @@
     <article class="notes hide" >
       
       <ul class="notes-list">
-       <!--  <li>
-          <article class="note">
-            <section class="note-info">
-              <p class="publish-date">måndag 3 Nov</p>
-              <textarea readonly class="text-note">Kul antecsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssskning</textarea>         
-              <button class="update" id ="btnUpdateNote">Uppdatera</button>
-            </section>
-            
-            <section class="note-footer">
-              <section class="user-info">
-                <img src="./src/assets/dash.svg" alt="Dash">
-                <p class="user">Snodden</p>
-              </section>
-
-              <section>
-                <button class="remove" id="btnRemoveNote">Ta Bort</button>
-              </section>
-            </section>
-           
-          </article>
-          
-        </li>
-        <li>
-          <article class="note">
-            <section class="note-info">
-              <p class="publish-date">måndag 3 Nov</p>
-              <textarea readonly class="title-note">Test</textarea>
-              <textarea readonly class="text-note">Kul antecsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssskning</textarea>        
-              <button class="update" id ="btnUpdateNote">Uppdatera</button>
-            </section>
-            
-            <section class="note-footer">
-              <section class="user-info">
-                <img src="./src/assets/dash.svg" alt="Dash">
-                <p class="user">Snodden</p>
-              </section>
-
-              <section>
-                <button class="remove" id="btnRemoveNote">Ta Bort</button>
-              </section>
-            </section>
-           
-          </article>
-          
-        </li> -->
+      
       </ul>
       <img class="add-new-note" id="btnAddNewNote" src="./src/assets/pencil.svg" alt="Pencil Button">
     </article>
 
     <article class="new-note hide">
       <button class="read-notes" id="btnReadNotes">Läs anteckningar</button>
-      <textarea class="title" id="titleToAdd" cols="30" placeholder="Title" maxlength="50"></textarea>
-      <textarea class="note-textarea" id="noteToAdd" cols="30" rows="10" placeholder="Börja skriva.." maxlength="200"></textarea>
+      <input class="title" minlength="5" id="titleToAdd" cols="30" placeholder="Title" maxlength="50"></input>
+      <textarea class="note-textarea" id="noteToAdd" cols="30" rows="10" placeholder="Börja skriva.." minlength="5" maxlength="200"></textarea>
 
       <button class="publish" id="btnPublishNote">Publicera</button>
-      <p>Current user: <span id="currentUser"></span></p>
+      
       <button class="change-user" id="btnChangeUser">Change User</button>
+      <p>Current user: <span id="currentUser"></span></p>
     </article>
 
     <article class="login-page">
-      <h1>Välkommen till Swing notes</h1>
-      <p>Vänligen skriv in ett användarnamn för att börja kunna ta antecknignar</p>
+      <h1>Välkommen till <span>Swing notes</span></h1>
+      <p>Vänligen skriv in ett användarnamn för att börja kunna skriva antecknignar.</p>
       <input type="text" id="usernameLogin">
       <button id="btnLogin">Login</button>
     </article>

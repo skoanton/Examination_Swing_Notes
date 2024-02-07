@@ -11,7 +11,7 @@
         font-size: 1rem;
         padding: 1rem;
         &:focus{
-            outline: none;      
+            outline: none;
             &::placeholder{
                 color: transparent;
             }
@@ -19,40 +19,27 @@
     }
 
     .title{
-        height: 5rem;
+        height: 4rem;
+        
         
     }
     .note-textarea{
         flex-grow: 1;
         max-height: 30rem;
+
+    }
+
+    .change-user{
+        align-self: center;
+    }
     
-          
-    }
-
-    .username-input{
-        @include mixin.flexbox-settings(flex,column);
-        gap: 0.5rem;
-
-        p{
-            color: colors.$color-white;
-            letter-spacing: 0.35rem;
-            font-size: 1rem;
-        }
-
-        input{
-            height: 5rem;
-            font-size: 1.25rem;
-            padding: 0 1rem;
-            background-color: transparent;
-            color: colors.$color-white;
-            border: 1px solid colors.$color-white;
-            border-radius: 3px;
-
-            &:focus{     
-                outline: none;
-            }
+    p{
+        text-align: center;
+        color: colors.$color-white;
+        font-size: 1rem;
+        span{
+            text-decoration: underline;
         }
     }
-
 
 }

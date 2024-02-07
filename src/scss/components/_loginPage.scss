@@ -1,7 +1,33 @@
 @use "../mixin/mixin" as mixin;
+@use "../abstracts/colors" as colors;
 
 .login-page{
     @include mixin.flexbox-settings(flex,column,center,center);
     gap: 1rem;
+    height: 100%;
+
+    h1{
+        font-size: 2rem;
+        color: colors.$color-white;
+        span{
+            color: colors.$color-secondary;
+            text-decoration: underline;
+        }
+    }
+
+    p{
+        color: colors.$color-white;
+        text-align: center;
+    }
+
+    input{
+        font-size: 1rem;
+        height: 2rem;
+        width: 15rem;
+        padding: 1rem;
+        &:focus {
+            outline: none;
+        }
+    }
     
 }

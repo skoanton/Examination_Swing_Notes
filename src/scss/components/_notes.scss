@@ -33,7 +33,6 @@
             @include mixin.flexbox-settings(flex, column);
             gap: 1rem;
 
-
             .text-note, .title-note {
                 border: none;
                 width: 100%;
